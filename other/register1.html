@@ -1,0 +1,52 @@
+
+{% extends 'layout.html' %}
+
+{% block head %} <title>register</title>  
+<style>
+    body{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+{% endblock %} 
+
+
+
+{% block body%} 
+<h1> {{message}} </h1>
+<h1>register form </h1>
+<div class="container" >
+    <form action="/register" method="POST" >
+        <div class="mb-3">
+         <label for="exampleInputEmail1" class="form-label">full name</label>
+         <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+       </div>
+       <div class="mb-3">
+           <label for="exampleInputPassword1" class="form-label">Email address</label required>
+           <input name="email" type="email" class="form-control" id="exampleInputPassword1">
+         </div>
+      
+       <div class="mb-3">
+         <label for="exampleInputPassword1" class="form-label">Password</label>
+         <input name="pass1" type="password" class="form-control" id="exampleInputPassword1" required  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+       </div>
+       <div class="mb-3">
+           <label for="exampleInputPassword1" class="form-label">Password</label>
+           <input name="pass2" type="password" class="form-control" id="exampleInputPassword1">
+         </div>
+         <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">phone</label>
+          <input name="phone" type="text" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">birth</label>
+          <input name="birth" type="date" class="form-control" id="exampleInputPassword1">
+        </div>
+       <button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+</div>
+{% endblock %}

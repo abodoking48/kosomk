@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="/static/Style/Detail.css">
+    <title>Product Details</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="images">
+                <div class="img-holder active">
+                    <img src="/static/images/card1.png">
+                </div>
+                <div class="img-holder">
+                    <img src="/static/images/card2.png">
+                </div>
+                <div class="img-holder">
+                    <img src="/static/images/card3.png">
+                </div>
+                <div class="img-holder">
+                    <img src="/static/images/card4.png">
+                </div>
+            </div>
+            <div class="basic-info">
+                <h1>92 ALLIUM PLACE, ORLANDO FL 32827</h1>
+                <div class="rate">
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                </div>
+                
+                <span class="price">$590,693</span>
+                <div class="info-home">
+                <span class="room"><img src="/static/images/room.png">4</span>
+                <span class="space"> <img src="/static/images/ArrowsOut.png">150m</span>
+                <span class="address"><img src="/static/images/Location.png"> Baghdad</span>
+                  </div>  
+                  <span class="phone"><img src="/static/images/telephone.png"> 0780554444</span>
+                <div class="options">
+                    <a href="#">Buy It Now</a>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="description">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus temporibus corporis repudiandae, consectetur nostrum nisi commodi placeat rerum molestias numquam nihil accusantium deleniti! Enim, nesciunt a quis amet hic officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nemo accusantium tempora facere doloremque cum iusto, ut neque, fuga omnis libero laborum ullam. At dolorum qui atque labore illo dignissimos.</p>
+                <ul class="features">
+                    <li><i class="fa-solid fa-circle-check"></i>Supported Feature</li>
+                    <li><i class="fa-solid fa-circle-check"></i>Supported Feature</li>
+                    <li><i class="fa-solid fa-circle-check"></i>Supported Feature</li>
+                    <li><i class="fa-solid fa-circle-xmark"></i>Unsupported Feature</li>
+                    <li><i class="fa-solid fa-circle-xmark"></i>Unsupported Feature</li>
+                </ul>
+                <ul class="social">
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i>instagram</a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i>twiter</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+		let thumbnails = document.getElementsByClassName('img-holder')
+
+		let activeImages = document.getElementsByClassName('active')
+
+		for (var i=0; i < thumbnails.length; i++){
+
+			thumbnails[i].addEventListener('mouseover', function(){
+				console.log(activeImages)
+				
+				if (activeImages.length > 0){
+					activeImages[0].classList.remove('active')
+				}
+				
+
+				this.classList.add('active')
+				document.getElementById('featured').src = this.src
+			})
+		}
+
+
+		// let buttonRight = document.getElementById('slideRight');
+		// let buttonLeft = document.getElementById('slideLeft');
+
+		// buttonLeft.addEventListener('click', function(){
+		// 	document.getElementById('slider').scrollLeft -= 180
+		// })
+
+		// buttonRight.addEventListener('click', function(){
+		// 	document.getElementById('slider').scrollLeft += 180
+		// })
+
+
+	</script>
+</body>
+</html>

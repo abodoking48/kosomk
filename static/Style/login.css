@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    background-color: #F5F5F5;
+    /* width: 1500px; */
+    height: 100%;
+}
+
+.container {
+    width: 960px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 9%;
+    border-radius: 2rem;
+    border: 1px solid #4d7baf;
+    overflow: hidden;
+}
+.login {
+    max-width: 960px;
+    /* max-height: 900px; */
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    padding: 0 auto;
+    
+    
+}
+
+.login .acount {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    position: relative;
+   
+}
+
+.login .acount h2 {
+    color: #4A60A1;
+    font-size: 35px;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    line-height: 48px;
+    font-weight: 700;
+    font-family: 'Inter' sans-serif;
+}
+.login .acount span {
+    width: 65px;
+    height: 2px;
+    background-color: #A0A6AD;
+    position: absolute;
+    top: 30%;
+    left: 39%;
+}
+
+.login .acount form {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    
+}
+.login .acount form input {
+    border: none;
+    border-bottom: 1px solid #6D737A;
+    margin: 10px 0;
+    background-color: #F5F5F5;
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+.login .acount .forgot {
+    text-decoration: none;
+    color: #889099;
+    position: absolute;
+    top: 61%;
+    font-size: 13px;
+    left: 50%;
+}
+.login .acount .btn-login {
+    position: absolute;
+    top: 9.5rem;
+    left: 14%;
+    background-color: #4A60A1;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 20px;
+    color: #F5F5F5;
+    text-decoration: none;
+}
+.login .acount .btn-login:hover {
+    background-color:#4d7baf;
+}
+.login .acount .Register {
+    text-decoration: none;
+    position: absolute;
+    top: 75.5%;
+    left: 50%;
+    color: #52565C;
+    font-weight: 600;
+    font-size: 16px;
+    
+}
+.login .acount .Register:hover {
+    color: #4A60A1;
+}
+
+.login .img img {
+   width: 600px;
+
+}
+.login .acount .HOME {
+    text-decoration: none;
+    position: absolute;
+    bottom: 21%;
+    left: -10%;
+    color: #52565C;
+    font-weight: 600;
+    font-size: 16px;
+}
+

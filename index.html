@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/static/icons/HouseLine.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/Style/style.css">
+    
+    <title>AMI</title>
+</head>
+<body>
+    <header>
+        <div class="img-background"> 
+        <img src="/static/images/Rectangle 6.png" class="background" alt="img">
+    </div>
+        <h1>Find Your Dream Home</h1>
+        <p>This site is your best choice for getting your dream home. Here you get a nice experience when you find a home or offer a home</p>
+        <nav>
+         <div class="contianer-nav"> 
+            <div class="logo">
+                <img src="/static/images/logo.png" class="logo-nav" alt="logo">
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">PROPERTIES</a></li>
+                    <li><a href="/sell">SALE</a></li>
+                    <li><a href="#">BUY</a></li>
+                    <li><a href="#">RENT</a></li>
+                </ul>
+            </div>
+            <a href="login" class="btn">Login</a>
+         </div>
+        </nav>
+        <div class="Search">
+            <div class="container-Search">
+                <form action="">
+               <div class="form-group">
+                <label for="Locations" >Locations</label><br>
+                <select name="Locations" id="Locations">
+                    <option value="">Select your city</option>
+                    <option value="Baghdad">Baghdad</option>
+                    <option value="Ramadi">Ramadi</option>
+                    <option value="Basra">Basra</option>
+                    <option value="Duhok">Duhok</option>
+                    <option value="Erbil">Erbil</option>
+                    <option value="Karbala">Karbala</option>
+                    <option value="Kirkuk">Kirkuk</option>
+                    <option value="Najaf">Najaf</option>
+                    <option value="Mosul" >Mosul</option>
+                    <option value="Tikrit">Tikrit</option>
+                    <option value="Slemani">Slemani</option>
+                </select>
+               </div>
+               <span></span>
+               <div class="form-group">
+                <label for="Property Type" >Property Type</label><br>
+                <select name="Property Type" id="Property Type" >
+                    <option value="">Select property type</option>
+                    <option value="Rent">Rent</option>
+                    <option value="BUY">BUY</option>
+                </select>
+               </div>
+               <span></span>
+               <div class="form-group">
+                <label for="Range">Range</label><br>
+                <select name="Range" id="Range" >
+                    <option value="">Select range</option>
+                    <option value="50-100">50-100</option>
+                    <option value="100-150">100-150</option>
+                    <option value="150-200">150-200</option>
+                    <option value="200-250">200-250</option>
+                </select>
+               </div>
+               <span></span>
+               <button type="submit" >Search</button>
+            </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!------------------ Featured ----------------------->
+        <section id="Featured" >
+            <div class="container">
+                <div class="Featured-title">
+                <h2>Featured</h2>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat.</p>
+                </div>
+                <div class="row rowfeatured">
+                <!-- Start col-1-4  -->
+                <div class="col-1-4">
+                    <div class="img-card"><span class="hot">Hot offer</span>
+                        <img src="/static/images/featured1.png" >
+                        <a href="#">View Detail</a>
+                        <div class="Location"><img src="/static/images/MapPin.png"> <span>Duhok</span></div>
+                        <div class="area"><img src="/static/images/area.png"> <span>50M</span></div>
+                    </div>
+                    </div>
+                    <!-- End col-1-4  -->
+                    <!-- Start col-1-4  -->
+                    {% for apar in APARTMEN_F %}
+                <div class="col-1-4">
+                    <div class="img-card"><span class="hot">Hot offer</span>
+                        <img src="{{ apar.path }}" >
+                        <a href="#">View Detail</a>
+                        <div class="Location"><img src="/static/images/MapPin.png"> <span>{{ apar.address }}</span></div>
+                        <div class="area"><img src="/static/images/area.png"> <span>150M</span></div>
+                    </div>
+                    </div>
+                    {%endfor%}
+                    <!-- End col-1-4  -->
+                    <!-- Start col-1-4  -->
+               {% for house in HOUSES_F %}
+               <div class="col-1-4">
+                <div class="img-card"><span class="hot">Hot offer</span>
+                    <img src="{{ house.path }}">
+                    <a href="#">View Detail</a>
+                    <div class="Location"><img src="/static/images/MapPin.png"> <span>{{ house.address }}</span></div>
+                    <div class="area"><img src="/static/images/area.png"> <span>200M</span></div>
+                </div>
+                </div>
+               {%endfor%}
+                    <!-- End col-1-4  -->
+                    <!-- Start col-1-4  -->
+                <div class="col-1-4">
+                    <div class="img-card"><span class="hot">Hot offer</span>
+                        <img src="/static/images/featured4.png" >
+                        <a href="#">View Detail</a>
+                        <div class="Location"><img src="/static/images/MapPin.png"> <span>Basra</span></div>
+                        <div class="area"><img src="/static/images/area.png"> <span >300M</span></div>
+                    </div>
+                    </div>
+                    <!-- End col-1-4  -->
+                    <!-- Start col-1-4  -->
+                <div class="col-1-4">
+                    <div class="img-card"><span class="hot">Hot offer</span>
+                        <img src="/static/images/featured4.png" >
+                        <a href="#">View Detail</a>
+                        <div class="Location"><img src="/static/images/MapPin.png"> <span>Basra</span></div>
+                        <div class="area"><img src="/static/images/area.png"> <span >300M</span></div>
+                    </div>
+                    </div>
+                    <!-- End col-1-4  -->
+                    <!-- Start col-1-4  -->
+                <div class="col-1-4">
+                    <div class="img-card"><span class="hot">Hot offer</span>
+                        <img src="/static/images/featured4.png" >
+                        <a href="#">View Detail</a>
+                        <div class="Location"><img src="/static/images/MapPin.png"> <span>Basra</span></div>
+                        <div class="area"><img src="/static/images/area.png"> <span >300M</span></div>
+                    </div>
+                    </div>
+                    <!-- End col-1-4  -->
+                    <!-- Start col-1-4  -->
+                <div class="col-1-4">
+                    <div class="img-card"><span class="hot">Hot offer</span>
+                        <img src="/static/images/featured4.png" >
+                        <a href="#">View Detail</a>
+                        <div class="Location"><img src="/static/images/MapPin.png"> <span>Basra</span></div>
+                        <div class="area"><img src="/static/images/area.png"> <span >300M</span></div>
+                    </div>
+                    </div>
+                    <!-- End col-1-4  -->
+                    <!-- Start col-1-4  -->
+                <div class="col-1-4">
+                    <div class="img-card"><span class="hot">Hot offer</span>
+                        <img src="/static/images/featured4.png" >
+                        <a href="#">View Detail</a>
+                        <div class="Location"><img src="/static/images/MapPin.png"> <span>Basra</span></div>
+                        <div class="area"><img src="/static/images/area.png"> <span >300M</span></div>
+                    </div>
+                    </div>
+                    <!-- End col-1-4  -->
+                </div>
+                    <div class="btn-Featured">
+                <button class="pre-btn"><img src="/static/images/ArrowLeft.png"></button>
+                <button class="nxt-btn"><img src="/static/images/ArrowRight.png"></button>
+            </div>
+            
+            </div>
+           
+        </section>
+    </main>
+    <footer></footer>
+     <script src="/static/main.js"></script>
+</body>
+</html>
